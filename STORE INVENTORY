@@ -1,0 +1,24 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, gender TEXT, Tops TEXT, size TEXT, color TEXT, price integer);
+
+INSERT INTO store VALUES (1,'M','sweater','S','blue', 3);
+INSERT INTO store VALUES (2,'M','sweater','S','green',6);
+INSERT INTO store VALUES (3,'M','sweater','S','red',9);
+INSERT INTO store VALUES (4,'F','sweater','S','blue',2);
+INSERT INTO store VALUES (5,'F','sweater','S','green',3);
+INSERT INTO store VALUES (6,'F','sweater','S','red',3);
+INSERT INTO store VALUES (7,'M','tank','L','yellow',5);
+INSERT INTO store VALUES (8,'M','tank','S','blue',4);
+INSERT INTO store VALUES (9,'M','tank','S','green',9);
+INSERT INTO store VALUES (10,'F','tank','S','pink',7);
+INSERT INTO store VALUES (11,'F','tank','S','blue',40);
+INSERT INTO store VALUES (12,'F','tank','L','green',4);
+INSERT INTO store VALUES (13,'M','tshirt','S','blue',1);
+INSERT INTO store VALUES (14,'M','tshirt','S', 'pink',4);
+INSERT INTO store VALUES (15,'F','tshirt','L','pink',4);
+
+SELECT * from store order by(price);
+
+SELECT Tops, sum(price) from store group by tops;
+
+
+
