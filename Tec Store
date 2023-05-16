@@ -1,0 +1,46 @@
+CREATE TABLE tec ( id integer primary key, name TEXT, color TEXT, quantity integer, size TEXT, price integer);
+
+insert into tec values 
+(1,'iphone', 'black',5,'S', 599); 
+insert into tec values 
+(2,'iphone', 'black',4,'M', 699); 
+insert into tec values
+(3,'iphone', 'black',7,'L', 799);
+insert into tec values
+(4,'iphone','blue',1,'S', 599);
+insert into tec values
+(5,'iphone','blue',8,'M', 699);
+insert into tec values
+(6,'iphone','blue',4,'L', 799);
+insert into tec values
+(7,'iphone','white',1,'S', 599);
+insert into tec values
+(8,'iphone','white',3,'M', 699);
+insert into tec values
+(9,'iphone','white',6,'L', 799);
+insert into tec values
+(10,'iphone','pink',5,'S', 599);
+insert into tec values
+(11,'iphone','pink',5,'M', 699);
+insert into tec values
+(12,'iphone','pink',3,'L', 799);
+insert into tec values
+(13,'iphone','gray',2,'S', 599);
+insert into tec values
+(14,'iphone','gray',2,'M', 699);
+insert into tec values
+(15,'iphone','gray',8,'L', 799);
+
+select * from tec order by price;
+
+select sum(quantity) from tec;
+
+SELECT SUM(quantity) AS total_black_iphone
+FROM tec
+WHERE color = 'black' AND name = 'iphone';
+
+select sum(quantity) as total_pink_iphone from tec where color = 'pink' and name='iphone';
+
+select sum(quantity) as total_S_iphone from tec where size = 'S' and name = 'iphone';
+
+select sum(quantity) as total_blue_S_M_iphone from tec where color = 'blue' and size in('S','M') and name = 'iphone';
